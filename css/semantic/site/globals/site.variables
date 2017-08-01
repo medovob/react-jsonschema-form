@@ -1,0 +1,9 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@fontName          : inherit;
+
+@headerFont        : inherit;
+
+@importGoogleFonts : false;

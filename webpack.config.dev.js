@@ -23,9 +23,14 @@ module.exports = {
         loader: "babel",
         include: [
           path.join(__dirname, "src"),
+          path.join(__dirname, "semantic-form"),
           path.join(__dirname, "playground"),
           path.join(__dirname, "node_modules", "codemirror", "mode", "javascript"),
         ]
+      },
+      {
+        test: /\.less$/,
+        loader:"style!css!less"
       },
       {
         test: /\.css$/,

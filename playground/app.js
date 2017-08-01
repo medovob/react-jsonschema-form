@@ -18,6 +18,9 @@ import "codemirror/theme/solarized.css";
 import "codemirror/theme/monokai.css";
 import "codemirror/theme/eclipse.css";
 
+import TitleField from "../semantic-form/components/title-field";
+
+
 // Patching CodeMirror#componentWillReceiveProps so it's executed synchronously
 // Ref https://github.com/mozilla-services/react-jsonschema-form/issues/174
 Codemirror.prototype.componentWillReceiveProps = function (nextProps) {
@@ -361,7 +364,7 @@ class App extends Component {
               uiSchema={uiSchema}
               formData={formData}
               onChange={this.onFormDataChange}
-              fields={{geo: GeoPosition}}
+              fields={{geo: GeoPosition,TitleField}}
               validate={validate}
               onError={log("errors")} />}
         </div>

@@ -1,0 +1,57 @@
+@import (reference) "./semantic/semantic.less";
+
+body {
+  font-family:'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.container-fluid {
+  @import "./semantic/definitions/globals/reset.less";
+  @import "./semantic/definitions/globals/site.less";
+
+  form {
+    &:extend(.ui.form all);
+    font-size:12px;
+  }
+
+  fieldset {
+    &:extend(.ui.segment);
+    .legend {
+      &:extend(.ui.header all);
+      &:extend(.ui.dividing.header all);
+    }
+    box-sizing:border-box;
+    font-size:inherit;
+    background-color:rgba(0,0,0,0.03);
+  }
+
+  .form-group.field {
+    &:extend(.ui.form .field all);
+    &:extend(.ui.mini.form .field all);
+    >label {
+      line-height:1.1em;
+      margin:0 0.5em;
+      &+* {
+        margin-top:0.3em;
+      }
+      &+.field-description {
+        &:extend(.ui.form .field>label all);
+        font-weight:normal;
+        line-height:1.1em;
+        margin-top:0em;
+      }
+    }
+  }
+
+
+
+  button {
+    &:extend(.ui.button all);
+  }
+
+}
+
+
+
+@bgColor:green;
+
+.test { backgroundColor:@bgColor; }
